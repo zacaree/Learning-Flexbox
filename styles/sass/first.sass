@@ -1,0 +1,76 @@
+
+// Resets
+*
+   margin: 0
+   padding: 0
+   border: 0
+   outline: 0
+   font-size: 100%
+   vertical-align: baseline
+   background: transparent
+
+// Box sizing reset explained here: https://css-tricks.com/box-sizing/
+html
+   box-sizing: border-box
+
+*, *:before, *:after
+   box-sizing: inherit
+
+
+
+
+
+body
+   height: 100vh
+   background-image: linear-gradient(45deg, red, orange)
+   font-family: 'Montserrat', sans-serif
+
+a
+   text-decoration: none
+   color: #eee
+
+.wrapper
+   max-width: 1200px
+   margin: 0 auto
+   padding: 50px
+   // border: 1px solid black
+
+//
+// Flex Container
+//
+
+// Sass Variable
+$MQ1000: "all and (max-width: 1000px)"
+
+
+.flex-nav
+   ul
+      display: flex
+      @media #{$MQ1000}
+         flex-wrap: wrap
+
+      border: 1px solid rgba(0, 0, 0, 0.32)
+      border-radius: 3px
+      list-style: none
+      background-color: rgba(0, 0, 0, 0.25)
+
+   li
+      flex: 3
+      @media #{$MQ1000}
+         flex: 1 1 50%
+
+      padding: 20px 0
+      text-align: center
+
+      transition: 0.3s
+
+   li:hover
+      background-color: rgba(0, 0, 0, 0.2)
+
+   li:active
+      background-color: rgba(0, 0, 0, 0.5)
+
+   .social
+      flex: 1
+      @media #{$MQ1000}
+         flex: 1 1 25%
