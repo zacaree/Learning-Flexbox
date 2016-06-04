@@ -46,8 +46,6 @@ $MQ1000: "all and (max-width: 1000px)"
 .flex-nav
    ul
       display: flex
-      @media #{$MQ1000}
-         flex-wrap: wrap
 
       border: 1px solid rgba(0, 0, 0, 0.32)
       border-radius: 3px
@@ -55,9 +53,7 @@ $MQ1000: "all and (max-width: 1000px)"
       background-color: rgba(0, 0, 0, 0.25)
 
    li
-      flex: 3
-      @media #{$MQ1000}
-         flex: 1 1 50%
+      // flex: 3
 
       padding: 20px 0
       text-align: center
@@ -70,7 +66,10 @@ $MQ1000: "all and (max-width: 1000px)"
    li:active
       background-color: rgba(0, 0, 0, 0.5)
 
-   .social
-      flex: 1
-      @media #{$MQ1000}
+   @media all and (max-width: 1000px)
+      .ul
+         flex-wrap: wrap
+      .li
+         flex: 1 1 50%
+      .social
          flex: 1 1 25%
