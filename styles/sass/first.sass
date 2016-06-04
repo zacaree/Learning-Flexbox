@@ -1,5 +1,6 @@
-
+//
 // Resets
+//
 *
    margin: 0
    padding: 0
@@ -33,21 +34,15 @@ a
    max-width: 1200px
    margin: 0 auto
    padding: 50px
-   // border: 1px solid black
+
+
 
 //
 // Flex Container
 //
-
-// Sass Variable: This is SO cool!
-$MQ1000: "all and (max-width: 1000px)"
-
-
 .flex-nav
    ul
       display: flex
-      @media #{$MQ1000}
-         flex-wrap: wrap
 
       border: 1px solid rgba(0, 0, 0, 0.32)
       border-radius: 3px
@@ -56,8 +51,6 @@ $MQ1000: "all and (max-width: 1000px)"
 
    li
       flex: 3
-      @media #{$MQ1000}
-         flex: 1 1 50%
 
       padding: 20px 0
       text-align: center
@@ -72,5 +65,15 @@ $MQ1000: "all and (max-width: 1000px)"
 
    .social
       flex: 1
-      @media #{$MQ1000}
+
+   @media all and (max-width: 1000px)
+      ul
+         flex-wrap: wrap
+      li
+         flex: 1 1 50%
+      .social
          flex: 1 1 25%
+
+   @media all and (max-width: 500px)
+      li
+         flex-basis: 100%
